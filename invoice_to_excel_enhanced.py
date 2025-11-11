@@ -55,8 +55,8 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # API Key Configuration
-LLAMA_KEY = st.secrets.get("LLAMA_CLOUD_API_KEY") or os.getenv("LLAMA_CLOUD_API_KEY")
-GOOGLE_KEY = st.secrets.get("GOOGLE_API_KEY") or os.getenv("GOOGLE_API_KEY")
+LLAMA_KEY = st.secrets.get("llx-XpzUz6H19piWqW5g7m0tQ9vrIuiR8nB3kEMVdbRSe6kgZVNC") or os.getenv("LLAMA_CLOUD_API_KEY")
+GOOGLE_KEY = st.secrets.get("AIzaSyCYB9ng6ceMQE2_wEu6YW3_LgYJ3OcIHik") or os.getenv("GOOGLE_API_KEY")
 
 if not (LLAMA_KEY and GOOGLE_KEY):
     st.error("⚠️ Missing API keys. Please set environment variables or Streamlit secrets:")
@@ -66,7 +66,7 @@ if not (LLAMA_KEY and GOOGLE_KEY):
     """)
     st.stop()
 
-genai.configure(api_key=GOOGLE_KEY)
+genai.configure(api_key="AIzaSyCYB9ng6ceMQE2_wEu6YW3_LgYJ3OcIHik")
 
 # Enhanced Gemini Prompt
 GEMINI_PROMPT = """You are an expert invoice data extraction system.
